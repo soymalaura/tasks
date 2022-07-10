@@ -1,0 +1,28 @@
+-- Adminer 4.8.1 MySQL 8.0.29 dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+SET NAMES utf8mb4;
+
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE `usuario` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(40) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `apellido` varchar(40) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `edad` tinyint NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `provincia` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `edad`, `fecha`, `provincia`) VALUES
+(1,	'Maria Laura',	'Castillo',	42,	'2022-07-10 19:45:27',	'CABA'),
+(2,	'Manuel',	'Perez',	44,	'2022-07-10 19:45:27',	'CABA'),
+(3,	'Fabiola',	'Perez',	13,	'2022-05-10 16:43:45',	'CABA'),
+(4,	'Miguel',	'Castillo',	45,	'2022-07-10 19:45:27',	'Buenos Aires'),
+(5,	'Neidy',	'Carrasquel',	42,	'2022-07-10 19:45:27',	'Buenos Aires');
+
+-- 2022-07-10 19:50:23
